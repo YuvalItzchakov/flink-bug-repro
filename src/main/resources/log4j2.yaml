@@ -1,0 +1,17 @@
+Configuration:
+  appenders:
+    Console:
+      - name: stdout
+        PatternLayout:
+          Pattern: "%highlight{%d %p %C{1.} %m%n}{INFO=bright}"
+  Loggers:
+    logger:
+      - name: org.yuvalitzchakov
+        level: info
+        additivity: false
+        AppenderRef:
+          - ref: stdout
+    Root:
+      level: info
+      AppenderRef:
+        - ref: stdout
